@@ -1,91 +1,105 @@
-# 🏆 FuturePlay Sports Athlete Evaluation App
 
-A mobile-first web app for sports organizations to manage tryouts, evaluate players, and help coaches make confident, data-driven decisions.
+# 🏀 FuturePlay Sports - Athlete Evaluation App
 
-Built with **React**, **Firebase**, and **Tailwind CSS**. Developed by FuturePlay Sports.
+A mobile-friendly web application for managing tryouts, evaluating athletes, and supporting team selection — built for high school and club sports organizations.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Tryout registration form for parents
-- ✅ Skill-based evaluator scoring system
-- ✅ Coach note-taking and feedback tools
-- ✅ Real-time dashboard with player rankings
-- ✅ Player detail pages with skill breakdowns
-- ✅ Role-based access for clubs, evaluators, and coaches
-- ✅ Firebase Auth, Firestore, and secure data isolation
+- **Multi-organization support**: Each club or school sees only their own data.
+- **Tryout registration**: Form for collecting athlete details, jersey #, position, etc.
+- **Evaluator entry**: Soft skills scored by rubric, plus performance metrics.
+- **Coach dashboard**: Percentiles, averages, filtering, and team insights.
+- **Player detail view**: See full evaluation and coach notes.
+- **Data export**: CSV download of all tryout data.
+- **Onboarding video**: Welcome page for new admins.
+- **Responsive UI**: Mobile-first design using Tailwind CSS.
+- **Firebase-powered**: Authentication, Firestore DB, and hosting-ready.
 
 ---
 
-## 🧱 Tech Stack
+## 🧱 Firestore Data Schema
 
-- **Frontend:** React (Vite), Tailwind CSS, React Router
-- **Backend:** Firebase Firestore, Firebase Auth
-- **Deployment:** Vercel or Firebase Hosting (recommended)
-- **Version Control:** Git + GitHub
+### 🔹 `organizations/{orgId}`
 
----
+```json
+{
+  "name": "West Linn High School",
+  "users": ["uid1", "uid2"]
+}
+```
 
-## 🛠️ Getting Started
+### 🔹 `users/{uid}`
 
-### 1. Clone the repository
+```json
+{
+  "email": "coach@example.com",
+  "orgId": "westlinn",
+  "role": "admin",
+  "hasSeenWelcome": true
+}
+```
 
-git clone https://github.com/YOUR_USERNAME/athlete-eval-app.git
-cd athlete-eval-app
+### 🔹 `athletes/{docId}`
 
-### 2. Install dependencies
+```json
+{
+  "athleteId": "482193",
+  "firstName": "John",
+  "lastName": "Smith",
+  "jerseyNumberToday": "12",
+  "grade": "10",
+  "birthdate": "2009-04-18",
+  "gender": "Male",
+  "primaryPosition": "Guard",
+  "secondaryPosition": "Forward",
+  "orgId": "westlinn"
+}
+```
 
-npm install
+### 🔹 `evaluations/{docId}`
 
-
-### 3. Set up environment variables
-
-VITE_API_KEY=your-api-key
-VITE_AUTH_DOMAIN=your-auth-domain
-VITE_PROJECT_ID=your-project-id
-VITE_STORAGE_BUCKET=your-storage-bucket
-VITE_MESSAGING_SENDER_ID=your-messaging-sender-id
-VITE_APP_ID=your-app-id
-
-### 4. Start the app
-
-npm run dev
-
-Then visit: [http://localhost:5173](http://localhost:5173)
-
----
-
-## 🧪 User Roles
-
-* **Parent**: Registers a player for tryouts
-* **Evaluator**: Rates players on selected skills (visible only to them)
-* **Coach**: Views dashboards, adds notes, builds teams, compares rankings
-* **Admin/Org**: Manages club-level access, team config, and form setup
-
----
-
-## 🔒 Licensing
-
-Use of this software is governed by a **custom license**.
-See the [`LICENSE`](./LICENSE) file for terms and conditions.
-
----
-
-## 🤝 Collaborators
-
-This project is actively maintained by the FuturePlay Sports team.
-To request access, become a partner, or contribute, contact:
-
-📩 [micah@futureplaysports.info]
-🌐 [www.futureplaysports.info]
+```json
+{
+  "athleteId": "482193",
+  "orgId": "westlinn",
+  "evaluator": "uid123",
+  "Coachability": 4.5,
+  "Communication": 4.2,
+  "Vertical Jump (cm)": 58,
+  "Vertical Jump Percentile": 85,
+  "Evaluator Notes": "Very coachable"
+}
+```
 
 ---
 
-## 📌 Roadmap
+## 🔁 Pages & Routes
 
-* [ ] Org/team isolation
-* [ ] Admin-controlled scoring metrics
-* [ ] Team roster auto-planning
-* [ ] Charts and visual reports
-* [ ] Multi-language support
+| Path                     | Purpose                    |
+|--------------------------|----------------------------|
+| `/`                      | Redirect to `/register`    |
+| `/register`              | Tryout registration        |
+| `/evaluator`             | Submit evaluation          |
+| `/coach/notes`           | Add coach notes            |
+| `/coach/dashboard`       | View performance & scores  |
+| `/player/:jerseyNumber`  | Player detail view         |
+| `/signup-org`            | Create organization        |
+| `/welcome`               | Welcome video              |
+
+---
+
+## 🛡 Security
+
+- Firestore rules ensure users only access data tied to their `orgId`.
+- Evaluators cannot view other orgs' athletes or evaluations.
+
+---
+
+## 🧠 Tech Stack
+
+- **React** (with Vite)
+- **Firebase** (Auth + Firestore)
+- **Tailwind CSS**
+- **React Router DOM**

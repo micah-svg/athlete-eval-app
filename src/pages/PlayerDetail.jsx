@@ -5,81 +5,100 @@ import { db } from '../firebaseConfig';
 
 export default function PlayerDetail() {
   const { jerseyNumber } = useParams();
-  const [athlete, setAthlete] = useState(null);
   const [evaluations, setEvaluations] = useState([]);
-  const [notes, setNotes] = useState([]);
+  const [averages, setAverages] = useState({});
+  const [athleteId, setAthleteId] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      // Get athlete info
-      const athleteSnapshot = await getDocs(
-        query(collection(db, 'athletes'), where('jerseyNumber', '==', jerseyNumber))
-      );
-      if (!athleteSnapshot.empty) {
-        setAthlete(athleteSnapshot.docs[0].data());
-      }
-
-      // Get evaluations
-      const evalSnapshot = await getDocs(
-        query(collection(db, 'evaluations'), where('jerseyNumber', '==', jerseyNumber))
-      );
-      setEvaluations(evalSnapshot.docs.map((doc) => doc.data()));
-
-      // Get coach notes
-      const notesSnapshot = await getDocs(
-        query(collection(db, 'notes'), where('jerseyNumber', '==', jerseyNumber))
-      );
-      setNotes(notesSnapshot.docs.map((doc) => doc.data()));
+    const fetchEvaluations = async () => {
+      const evalRef = collection(db, 'evaluations');
+      const q = query(evalRef, where('athleteId', '==', jerseyNumber));
+      const snapshot = await getDocs(q);
+      const data = snapshot.docs.map(doc => doc.data());
+      setEvaluations(data);
+      setAthleteId(jerseyNumber);
     };
 
-    fetchData();
+    fetchEvaluations();
   }, [jerseyNumber]);
 
+  useEffect(() => {
+    if (evaluations.length === 0) return;
+
+    const numericFields = Object.keys(evaluations[0]).filter((key) =>
+      typeof evaluations[0][key] === 'number' && key !== 'timestamp'
+    );
+
+    const avg = {};
+    numericFields.forEach((field) => {
+      const total = evaluations.reduce((sum, ev) => sum + (Number(ev[field]) || 0), 0);
+      avg[field] = (total / evaluations.length).toFixed(2);
+    });
+
+    setAverages(avg);
+  }, [evaluations]);
+
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-4">
-      <h2 className="text-2xl font-bold mb-4 text-center">Player Details</h2>
+    <div className="max-w-5xl mx-auto mt-10 p-4">
+      <h2 className="text-2xl font-bold mb-6 text-center">Player Detail: #{athleteId}</h2>
 
-      {athlete ? (
-        <div className="mb-6">
-          <p><strong>Name:</strong> {athlete.name}</p>
-          <p><strong>Jersey Number:</strong> {athlete.jerseyNumber}</p>
-          <p><strong>Position:</strong> {athlete.position}</p>
-          <p><strong>Grade:</strong> {athlete.grade}</p>
+      {/* Averages Section */}
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold mb-2">Averaged Evaluation Summary</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {Object.entries(averages).map(([field, value]) => (
+            <div key={field} className="border p-2 rounded bg-gray-50">
+              <strong>{field}</strong>: {value}
+            </div>
+          ))}
         </div>
-      ) : (
-        <p>Loading player info...</p>
-      )}
-
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2">Evaluations</h3>
-        {evaluations.length > 0 ? (
-          <ul className="space-y-2">
-            {evaluations.map((ev, i) => (
-              <li key={i} className="border p-2 rounded">
-                <strong>{ev.skill}</strong>: {ev.rating} <br />
-                <span className="text-sm text-gray-500">{new Date(ev.timestamp?.seconds * 1000).toLocaleDateString()}</span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No evaluations found.</p>
-        )}
       </div>
 
+      {/* Individual Evaluations */}
       <div>
-        <h3 className="text-xl font-semibold mb-2">Coach Notes</h3>
-        {notes.length > 0 ? (
-          <ul className="space-y-2">
-            {notes.map((note, i) => (
-              <li key={i} className="border p-2 rounded">
-                {note.note}
-                <br />
-                <span className="text-sm text-gray-500">{new Date(note.timestamp?.seconds * 1000).toLocaleDateString()}</span>
-              </li>
+        <h3 className="text-xl font-semibold mb-2">Submitted Evaluations</h3>
+        {evaluations.length > 0 ? (
+          <div className="space-y-4">
+            {evaluations.map((ev, idx) => (
+              <div key={idx} className="p-4 border rounded bg-white shadow-sm">
+                <p className="text-sm text-gray-600 mb-1">
+                  <strong>Evaluator:</strong> {ev.evaluator}
+                </p>
+                <p className="text-sm text-gray-500 mb-2">
+                  {ev.timestamp?.seconds
+                    ? new Date(ev.timestamp.seconds * 1000).toLocaleDateString()
+                    : 'No date'}
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                  {Object.entries(ev)
+                    .filter(([key]) =>
+                      !['evaluator', 'timestamp', 'athleteId', 'Evaluator Notes'].includes(key)
+                    )
+                    .map(([key, value]) => (
+                      <div key={key}>
+                        <strong>{key}</strong>: {value}
+                      </div>
+                    ))}
+                </div>
+
+                {ev['Evaluator Notes'] && (
+                  <div className="mt-2 p-2 bg-blue-50 rounded text-sm">
+                    <strong>Evaluator Notes:</strong>
+                    <p>{ev['Evaluator Notes']}</p>
+                  </div>
+                )}
+
+                {ev['Placement Recommendation'] && (
+                  <div className="mt-1 text-sm text-green-700">
+                    <strong>Placement:</strong> {ev['Placement Recommendation']}
+                  </div>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         ) : (
-          <p>No notes found.</p>
+          <p>No evaluations found for this athlete.</p>
         )}
       </div>
     </div>
