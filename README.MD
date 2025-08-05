@@ -15,6 +15,7 @@ Built with **React**, **Firebase**, and **Tailwind CSS**. Developed by FuturePla
 - ✅ Player detail pages with skill breakdowns
 - ✅ Role-based access for clubs, evaluators, and coaches
 - ✅ Firebase Auth, Firestore, and secure data isolation
+- ✅ Roster placement recommendation for Varsity, JV, and JV2 teams
 
 ---
 
