@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F4F4F9;
+    color: #1B1B2F;
+  }
+
+  h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  button {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-lg text-white font-semibold bg-primary hover:bg-purple-800;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-dark hover:bg-teal-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-4;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-dark mb-4;
+  }
+
+  .badge {
+    @apply text-xs font-medium uppercase tracking-wide px-2 py-1 rounded-full;
+  }
+}

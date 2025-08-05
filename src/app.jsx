@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/StyledNavbar';
 import TryoutRegistrationForm from './pages/TryoutRegistrationForm_Enhanced';
 import EvaluatorForm from './pages/EvaluatorForm';
 import Notes from './pages/Notes';
@@ -8,7 +8,8 @@ import CoachDashboard from './pages/CoachDashboard_FilterExportView';
 import PlayerDetail from './pages/PlayerDetail';
 import OrgSignupForm from './pages/OrgSignupForm';
 import Welcome from './pages/Welcome';
-// import LoginForm from './pages/LoginForm'; // if you have one
+import LoginForm from './pages/LoginForm';
+import AdminTools from "./pages/AdminTools";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/player/:jerseyNumber" element={<PlayerDetail />} />
         <Route path="/signup-org" element={<OrgSignupForm />} />
         <Route path="/welcome" element={<Welcome />} />
-        {/* <Route path="/login" element={<LoginForm />} /> */}
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/admin-tools" element={<AdminTools />} />
       </Routes>
     </>
   );

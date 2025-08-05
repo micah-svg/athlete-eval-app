@@ -1,0 +1,1974 @@
+{
+  "organization": {
+    "id": "demoOrg",
+    "name": "Demo High School",
+    "users": {
+      "coach1": {
+        "role": "coach"
+      },
+      "evaluator1": {
+        "role": "evaluator"
+      },
+      "evaluator2": {
+        "role": "evaluator"
+      },
+      "evaluator3": {
+        "role": "evaluator"
+      }
+    }
+  },
+  "athletes": [
+    {
+      "id": "athlete01",
+      "firstName": "Brian",
+      "lastName": "Miller",
+      "jerseyNumber": 7,
+      "grade": 11,
+      "position": "PG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 4.45,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 6.47,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 9.59,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 7.8,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete02",
+      "firstName": "Richard",
+      "lastName": "Rodriguez",
+      "jerseyNumber": 99,
+      "grade": 12,
+      "position": "SF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 3.89,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 4.49,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 6.5,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.09,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete03",
+      "firstName": "Rachel",
+      "lastName": "Johnson",
+      "jerseyNumber": 14,
+      "grade": 9,
+      "position": "PF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 7.84,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 5.83,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 9.71,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 8.83,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete04",
+      "firstName": "Amanda",
+      "lastName": "Cook",
+      "jerseyNumber": 69,
+      "grade": 11,
+      "position": "SF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 8.81,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 5.03,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 6.3,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 7.87,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete05",
+      "firstName": "Melissa",
+      "lastName": "Moore",
+      "jerseyNumber": 7,
+      "grade": 10,
+      "position": "SG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 4.08,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 3.56,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 5.63,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 6.1,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete06",
+      "firstName": "Matthew",
+      "lastName": "Cook",
+      "jerseyNumber": 44,
+      "grade": 11,
+      "position": "SG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 8.61,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 8.8,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 3.88,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 3.92,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete07",
+      "firstName": "John",
+      "lastName": "Smith",
+      "jerseyNumber": 21,
+      "grade": 9,
+      "position": "PF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 9.51,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 5.37,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 4.31,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 8.65,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete08",
+      "firstName": "Samuel",
+      "lastName": "Miller",
+      "jerseyNumber": 12,
+      "grade": 12,
+      "position": "PG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 8.6,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 7.43,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 8.49,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 9.09,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete09",
+      "firstName": "Carla",
+      "lastName": "Jones",
+      "jerseyNumber": 1,
+      "grade": 11,
+      "position": "PF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 9.05,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 5.21,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 6.24,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 9.9,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete10",
+      "firstName": "Leslie",
+      "lastName": "West",
+      "jerseyNumber": 14,
+      "grade": 9,
+      "position": "PG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 5.89,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 7.57,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 9.0,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 9.2,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete11",
+      "firstName": "Rebecca",
+      "lastName": "Davis",
+      "jerseyNumber": 86,
+      "grade": 10,
+      "position": "SG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 7.42,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 5.77,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 7.99,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 3.52,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete12",
+      "firstName": "Douglas",
+      "lastName": "Tyler",
+      "jerseyNumber": 3,
+      "grade": 11,
+      "position": "PF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 5.78,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 8.43,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 7.7,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.02,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete13",
+      "firstName": "Andrew",
+      "lastName": "Pruitt",
+      "jerseyNumber": 74,
+      "grade": 12,
+      "position": "SF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 8.18,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 7.47,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 6.39,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.18,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete14",
+      "firstName": "Ashley",
+      "lastName": "Baker",
+      "jerseyNumber": 61,
+      "grade": 9,
+      "position": "SF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 7.38,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 8.35,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 4.79,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 7.63,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete15",
+      "firstName": "Mary",
+      "lastName": "Mack",
+      "jerseyNumber": 44,
+      "grade": 12,
+      "position": "SG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 3.96,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 4.83,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 5.83,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 8.56,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete16",
+      "firstName": "Matthew",
+      "lastName": "Solis",
+      "jerseyNumber": 78,
+      "grade": 11,
+      "position": "PG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 5.34,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 9.29,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 9.89,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.56,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete17",
+      "firstName": "Jamie",
+      "lastName": "Lynch",
+      "jerseyNumber": 51,
+      "grade": 12,
+      "position": "C",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 3.67,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 8.24,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 8.47,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 9.36,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete18",
+      "firstName": "Alison",
+      "lastName": "Pacheco",
+      "jerseyNumber": 82,
+      "grade": 12,
+      "position": "C",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 5,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 3,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator1": {
+            "score": 2,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 7.87,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 8.57,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 5.88,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.16,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete19",
+      "firstName": "Leslie",
+      "lastName": "Sanders",
+      "jerseyNumber": 86,
+      "grade": 12,
+      "position": "SF",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 5,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator1": {
+            "score": 4,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 3,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator2": {
+            "score": 5,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 1,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 10.0,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 7.43,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 5.26,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 9.3,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    },
+    {
+      "id": "athlete20",
+      "firstName": "Kayla",
+      "lastName": "Hunt",
+      "jerseyNumber": 66,
+      "grade": 9,
+      "position": "SG",
+      "evaluations": {
+        "Response to Feedback": {
+          "evaluator2": {
+            "score": 1,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Eye Contact & Engagement": {
+          "evaluator1": {
+            "score": 1,
+            "evaluatorId": "evaluator1",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator2": {
+            "score": 4,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 2,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Body Language": {
+          "evaluator3": {
+            "score": 3,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        },
+        "Questions Asked": {
+          "evaluator2": {
+            "score": 2,
+            "evaluatorId": "evaluator2",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          },
+          "evaluator3": {
+            "score": 4,
+            "evaluatorId": "evaluator3",
+            "orgId": "demoOrg",
+            "tryoutDate": "2025-08-04"
+          }
+        }
+      },
+      "performance": {
+        "40 Yard Dash": {
+          "score": 3.98,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Vertical Jump": {
+          "score": 3.87,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Agility Drill": {
+          "score": 5.16,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        },
+        "Shooting Accuracy": {
+          "score": 4.35,
+          "source": "demo-import",
+          "tryoutDate": "2025-08-04"
+        }
+      }
+    }
+  ]
+}
