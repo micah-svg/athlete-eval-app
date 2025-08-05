@@ -42,17 +42,12 @@ npm install
 
 ### 3. Set up environment variables
 
-Create a `.env` file in the project root with the following variables:
-
-```
 VITE_API_KEY=your-api-key
 VITE_AUTH_DOMAIN=your-auth-domain
 VITE_PROJECT_ID=your-project-id
 VITE_STORAGE_BUCKET=your-storage-bucket
 VITE_MESSAGING_SENDER_ID=your-messaging-sender-id
 VITE_APP_ID=your-app-id
-VITE_MEASUREMENT_ID=your-measurement-id
-```
 
 ### 4. Start the app
 
