@@ -3,13 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBJsMBASI57U7qtGfV-thyq1WnNpCRvvLk",
-  authDomain: "athleteeval.firebaseapp.com",
-  projectId: "athleteeval",
-  storageBucket: "athleteeval.firebasestorage.app",
-  messagingSenderId: "774922414334",
-  appId: "1:774922414334:web:ea5a217b7cb3804afdddaf",
-  measurementId: "G-5DFV9VLGKM"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
