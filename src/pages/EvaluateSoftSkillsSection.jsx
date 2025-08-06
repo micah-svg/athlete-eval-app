@@ -9,8 +9,9 @@ export default function EvaluateSoftSkillsSection() {
   const [athletes, setAthletes] = useState([]);
   const [scores, setScores] = useState({});
   const [showSkillSection, setShowSkillSection] = useState(false);
-  const [expandedSkills, setExpandedSkills] = useState({});
+  const [activeSkill, setActiveSkill] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [submittedSkills, setSubmittedSkills] = useState({});
   const [errors, setErrors] = useState({});
   const [formError, setFormError] = useState("");
 
@@ -69,15 +70,19 @@ export default function EvaluateSoftSkillsSection() {
     }
     alert(`✅ ${skillName} scores submitted!`);
     setScores({});
+
+    setActiveSkill(null);
+    setSubmittedSkills((prev) => ({
+      ...prev,
+      [skillName]: true,
+    }));
+
     setErrors({});
     setFormError("");
   };
 
   const toggleSkill = (skillName) => {
-    setExpandedSkills((prev) => ({
-      ...prev,
-      [skillName]: !prev[skillName],
-    }));
+    setActiveSkill((prev) => (prev === skillName ? null : skillName));
   };
 
   const toggleCategory = (category) => {
@@ -121,15 +126,22 @@ export default function EvaluateSoftSkillsSection() {
               {expandedCategories[category] && (
                 <div className="space-y-4 p-4">
                   {skills.map((skill) => {
-                    const isExpanded = expandedSkills[skill.name];
+                    const isExpanded = activeSkill === skill.name;
                     return (
                       <div key={skill.name} className="border rounded">
                         <div
-                          className="flex justify-between items-center px-4 py-2 bg-gray-50 cursor-pointer"
+                          className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
+                            submittedSkills[skill.name] ? "bg-green-100" : "bg-gray-50"
+                          }`}
                           onClick={() => toggleSkill(skill.name)}
                         >
                           <h4 className="font-semibold">{skill.name}</h4>
-                          <span className="text-lg">{isExpanded ? "−" : "+"}</span>
+                          <div className="flex items-center gap-2">
+                            {submittedSkills[skill.name] && (
+                              <span className="text-green-600">✔</span>
+                            )}
+                            <span className="text-lg">{isExpanded ? "−" : "+"}</span>
+                          </div>
                         </div>
 
                         {isExpanded && (
