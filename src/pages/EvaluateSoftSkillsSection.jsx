@@ -9,7 +9,7 @@ export default function EvaluateSoftSkillsSection() {
   const [athletes, setAthletes] = useState([]);
   const [scores, setScores] = useState({});
   const [showSkillSection, setShowSkillSection] = useState(false);
-  const [expandedSkills, setExpandedSkills] = useState({});
+  const [activeSkill, setActiveSkill] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
   const [submittedSkills, setSubmittedSkills] = useState({});
 
@@ -39,7 +39,7 @@ export default function EvaluateSoftSkillsSection() {
     }
     alert(`✅ ${skillName} scores submitted!`);
     setScores({});
-    setExpandedSkills({});
+    setActiveSkill(null);
     setSubmittedSkills((prev) => ({
       ...prev,
       [skillName]: true,
@@ -47,10 +47,7 @@ export default function EvaluateSoftSkillsSection() {
   };
 
   const toggleSkill = (skillName) => {
-    setExpandedSkills((prev) => {
-      const isExpanded = prev[skillName];
-      return isExpanded ? {} : { [skillName]: true };
-    });
+    setActiveSkill((prev) => (prev === skillName ? null : skillName));
   };
 
   const toggleCategory = (category) => {
@@ -94,7 +91,7 @@ export default function EvaluateSoftSkillsSection() {
               {expandedCategories[category] && (
                 <div className="space-y-4 p-4">
                   {skills.map((skill) => {
-                    const isExpanded = expandedSkills[skill.name];
+                    const isExpanded = activeSkill === skill.name;
                     return (
                       <div key={skill.name} className="border rounded">
                         <div
