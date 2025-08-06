@@ -6,7 +6,7 @@ import EvaluatorForm from './pages/EvaluatorForm';
 import Notes from './pages/Notes';
 import CoachDashboard from './pages/CoachDashboard_FilterExportView';
 import PlayerDetail from './pages/PlayerDetail';
-import OrgSignupForm from './pages/OrgSignupForm';
+import OrgSignupForm from './pages/OrgSignUpForm';
 import Welcome from './pages/Welcome';
 import LoginForm from './pages/LoginForm';
 import AdminTools from "./pages/AdminTools";

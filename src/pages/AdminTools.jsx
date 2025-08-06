@@ -1,6 +1,6 @@
 // src/pages/AdminTools.jsx
 import React from 'react';
-import { uploadDemoData } from '../scripts/uploadDemoData';
+import { uploadDemoData } from '../scripts/UploadDemoData';
 import { clearDemoData } from '../scripts/clearDemoData';
 
 export default function AdminTools() {
