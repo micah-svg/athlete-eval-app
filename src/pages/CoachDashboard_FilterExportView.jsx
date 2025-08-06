@@ -95,6 +95,28 @@ export default function CoachDashboard() {
       });
     });
 
+    // Compute FP Score and roster recommendation
+    summaries.forEach(player => {
+      const skillVals = Object.keys(skillCategories)
+        .map(cat => parseFloat(player[cat]))
+        .filter(v => !isNaN(v));
+      const fitnessVals = Object.keys(fitnessTests)
+        .map(test => parseFloat(player[test + " In-Gym"]))
+        .filter(v => !isNaN(v));
+
+      if (skillVals.length && fitnessVals.length) {
+        const skillAvg = skillVals.reduce((a, b) => a + b, 0) / skillVals.length; // 1-5
+        const fitnessAvg = fitnessVals.reduce((a, b) => a + b, 0) / fitnessVals.length; // 0-100
+        const normalizedSkill = skillAvg * 20; // scale to 0-100
+        const fpScore = Math.round((normalizedSkill + fitnessAvg) / 2);
+        player.fpScore = fpScore;
+
+        if (fpScore >= 80) player.rosterRecommendation = "A Team";
+        else if (fpScore >= 60) player.rosterRecommendation = "B Team";
+        else player.rosterRecommendation = "Reserve";
+      }
+    });
+
     setPlayers(summaries);
   }, [evaluations]);
 
@@ -109,7 +131,8 @@ export default function CoachDashboard() {
       "Athlete", "Grade", "Position",
       ...Object.keys(skillCategories),
       ...Object.keys(fitnessTests).map(test => `${test} In-Gym`),
-      ...(showNational ? Object.values(fitnessTests) : [])
+      ...(showNational ? Object.values(fitnessTests) : []),
+      "FP Score", "Roster Recommendation"
     ];
     const rows = filteredPlayers.map(p => {
       return [
@@ -118,7 +141,9 @@ export default function CoachDashboard() {
         p.position || '',
         ...Object.keys(skillCategories).map(cat => p[cat] || ''),
         ...Object.keys(fitnessTests).map(test => p[test + " In-Gym"] || ''),
-        ...(showNational ? Object.values(fitnessTests).map(nat => p[nat] || '') : [])
+        ...(showNational ? Object.values(fitnessTests).map(nat => p[nat] || '') : []),
+        p.fpScore || '',
+        p.rosterRecommendation || ''
       ].join(',');
     });
     const csvContent = [headers.join(','), ...rows].join('\n');
@@ -180,6 +205,8 @@ export default function CoachDashboard() {
               {showNational && Object.entries(fitnessTests).map(([test, nat]) => (
                 <th key={nat} className="p-2">{test} National %</th>
               ))}
+              <th className="p-2">FP Score</th>
+              <th className="p-2">Roster</th>
               <th className="p-2">View</th>
             </tr>
           </thead>
@@ -206,6 +233,8 @@ export default function CoachDashboard() {
                     {p[nat] ? `${p[nat]}%` : '-'}
                   </td>
                 ))}
+                <td className="p-2">{p.fpScore ?? '-'}</td>
+                <td className="p-2">{p.rosterRecommendation || '-'}</td>
                 <td className="p-2">
                   <button
                     className="text-blue-600 underline"

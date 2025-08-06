@@ -103,3 +103,30 @@ A mobile-friendly web application for managing tryouts, evaluating athletes, and
 - **Firebase** (Auth + Firestore)
 - **Tailwind CSS**
 - **React Router DOM**
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+  components/      # Reusable UI pieces like the navigation bar
+  pages/           # Route components for each screen
+  context/         # React context for global state
+  data/            # Static datasets and rubric definitions
+  scripts/         # Utility scripts and helpers
+  firebaseConfig.js# Firebase initialization (uses env vars)
+public/            # Static assets served by Vite
+```
+
+---
+
+## 🔧 Environment Setup
+
+1. Copy `.env.example` to `.env` and fill in your Firebase credentials.
+2. Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
