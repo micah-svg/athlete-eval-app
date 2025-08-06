@@ -11,6 +11,7 @@ export default function EvaluateSoftSkillsSection() {
   const [showSkillSection, setShowSkillSection] = useState(false);
   const [expandedSkills, setExpandedSkills] = useState({});
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [submittedSkills, setSubmittedSkills] = useState({});
 
   useEffect(() => {
     const fetchAthletes = async () => {
@@ -38,13 +39,18 @@ export default function EvaluateSoftSkillsSection() {
     }
     alert(`✅ ${skillName} scores submitted!`);
     setScores({});
+    setExpandedSkills({});
+    setSubmittedSkills((prev) => ({
+      ...prev,
+      [skillName]: true,
+    }));
   };
 
   const toggleSkill = (skillName) => {
-    setExpandedSkills((prev) => ({
-      ...prev,
-      [skillName]: !prev[skillName],
-    }));
+    setExpandedSkills((prev) => {
+      const isExpanded = prev[skillName];
+      return isExpanded ? {} : { [skillName]: true };
+    });
   };
 
   const toggleCategory = (category) => {
@@ -92,11 +98,18 @@ export default function EvaluateSoftSkillsSection() {
                     return (
                       <div key={skill.name} className="border rounded">
                         <div
-                          className="flex justify-between items-center px-4 py-2 bg-gray-50 cursor-pointer"
+                          className={`flex justify-between items-center px-4 py-2 cursor-pointer ${
+                            submittedSkills[skill.name] ? "bg-green-100" : "bg-gray-50"
+                          }`}
                           onClick={() => toggleSkill(skill.name)}
                         >
                           <h4 className="font-semibold">{skill.name}</h4>
-                          <span className="text-lg">{isExpanded ? "−" : "+"}</span>
+                          <div className="flex items-center gap-2">
+                            {submittedSkills[skill.name] && (
+                              <span className="text-green-600">✔</span>
+                            )}
+                            <span className="text-lg">{isExpanded ? "−" : "+"}</span>
+                          </div>
                         </div>
 
                         {isExpanded && (
