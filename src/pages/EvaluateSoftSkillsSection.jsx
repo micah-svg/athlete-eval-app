@@ -12,6 +12,8 @@ export default function EvaluateSoftSkillsSection() {
   const [activeSkill, setActiveSkill] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
   const [submittedSkills, setSubmittedSkills] = useState({});
+  const [errors, setErrors] = useState({});
+  const [formError, setFormError] = useState("");
 
   useEffect(() => {
     const fetchAthletes = async () => {
@@ -23,6 +25,35 @@ export default function EvaluateSoftSkillsSection() {
   }, []);
 
   const handleSubmit = async (skillName) => {
+    let hasError = false;
+    const updatedErrors = { ...errors };
+
+    for (const athlete of athletes) {
+      const rawScore = scores[athlete.id]?.[skillName];
+      if (rawScore !== undefined) {
+        const num = parseInt(rawScore, 10);
+        if (!Number.isInteger(num) || num < 1 || num > 5) {
+          if (!updatedErrors[athlete.id]) updatedErrors[athlete.id] = {};
+          updatedErrors[athlete.id][skillName] = true;
+          hasError = true;
+        } else if (updatedErrors[athlete.id]) {
+          delete updatedErrors[athlete.id][skillName];
+          if (Object.keys(updatedErrors[athlete.id]).length === 0) {
+            delete updatedErrors[athlete.id];
+          }
+        }
+      }
+    }
+
+    setErrors(updatedErrors);
+
+    if (hasError) {
+      setFormError("Please correct highlighted scores (1–5 only)");
+      return;
+    }
+
+    setFormError("");
+
     for (const athlete of athletes) {
       const score = parseInt(scores[athlete.id]?.[skillName]);
       if (!score || score < 1 || score > 5) continue;
@@ -39,11 +70,15 @@ export default function EvaluateSoftSkillsSection() {
     }
     alert(`✅ ${skillName} scores submitted!`);
     setScores({});
+
     setActiveSkill(null);
     setSubmittedSkills((prev) => ({
       ...prev,
       [skillName]: true,
     }));
+
+    setErrors({});
+    setFormError("");
   };
 
   const toggleSkill = (skillName) => {
@@ -112,6 +147,9 @@ export default function EvaluateSoftSkillsSection() {
                         {isExpanded && (
                           <div className="p-4 space-y-3">
                             <p className="text-sm text-gray-600">{skill.definition}</p>
+                            {formError && (
+                              <p className="text-sm text-red-500">{formError}</p>
+                            )}
                             <table className="w-full text-sm border mb-4">
                               <thead>
                                 <tr className="bg-gray-100">
@@ -128,24 +166,58 @@ export default function EvaluateSoftSkillsSection() {
                                     <td className="p-2 border">{athlete.firstName}</td>
                                     <td className="p-2 border">{athlete.lastName}</td>
                                     <td className="p-2 border">
-                                      <input
-                                        type="number"
-                                        min="1"
-                                        max="5"
-                                        value={
-                                          scores[athlete.id]?.[skill.name] || ""
-                                        }
-                                        onChange={(e) =>
-                                          setScores((prev) => ({
-                                            ...prev,
-                                            [athlete.id]: {
-                                              ...prev[athlete.id],
-                                              [skill.name]: e.target.value,
-                                            },
-                                          }))
-                                        }
-                                        className="w-16 px-2 py-1 border rounded"
-                                      />
+                                      <div className="flex flex-col">
+                                        <input
+                                          type="number"
+                                          min="1"
+                                          max="5"
+                                          value={
+                                            scores[athlete.id]?.[skill.name] || ""
+                                          }
+                                          onChange={(e) => {
+                                            const value = e.target.value;
+                                            setScores((prev) => ({
+                                              ...prev,
+                                              [athlete.id]: {
+                                                ...prev[athlete.id],
+                                                [skill.name]: value,
+                                              },
+                                            }));
+                                            const num = parseInt(value, 10);
+                                            setErrors((prev) => {
+                                              const updated = { ...prev };
+                                              if (
+                                                !Number.isInteger(num) ||
+                                                num < 1 ||
+                                                num > 5
+                                              ) {
+                                                if (!updated[athlete.id])
+                                                  updated[athlete.id] = {};
+                                                updated[athlete.id][skill.name] = true;
+                                              } else if (updated[athlete.id]) {
+                                                delete updated[athlete.id][skill.name];
+                                                if (
+                                                  Object.keys(updated[athlete.id]).length === 0
+                                                ) {
+                                                  delete updated[athlete.id];
+                                                }
+                                              }
+                                              return updated;
+                                            });
+                                            if (formError) setFormError("");
+                                          }}
+                                          className={`w-16 px-2 py-1 border rounded ${
+                                            errors[athlete.id]?.[skill.name]
+                                              ? "border-red-500"
+                                              : ""
+                                          }`}
+                                        />
+                                        {errors[athlete.id]?.[skill.name] && (
+                                          <span className="text-xs text-red-500">
+                                            Score must be 1–5
+                                          </span>
+                                        )}
+                                      </div>
                                     </td>
                                   </tr>
                                 ))}
