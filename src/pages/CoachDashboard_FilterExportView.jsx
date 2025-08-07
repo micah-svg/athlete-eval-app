@@ -20,6 +20,8 @@ const skillCategories = {
 };
 
 const fitnessTests = {
+  "Height": "Height Percentile",
+  "Wingspan": "Wingspan Percentile",
   "Vertical Jump (cm)": "Vertical Jump Percentile",
   "20m Sprint (sec)": "Sprint Percentile",
   "T-Test Agility (sec)": "Agility Percentile",
@@ -31,6 +33,7 @@ const fitnessTests = {
 export default function CoachDashboard() {
   const [evaluations, setEvaluations] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [athleteInfo, setAthleteInfo] = useState({});
   const [showNational, setShowNational] = useState(false);
   const [filters, setFilters] = useState({ grade: '', position: '' });
   const navigate = useNavigate();
@@ -42,6 +45,24 @@ export default function CoachDashboard() {
       setEvaluations(data);
     };
     fetchEvaluations();
+  }, []);
+
+  useEffect(() => {
+    const fetchAthletes = async () => {
+      const snap = await getDocs(collection(db, 'athletes'));
+      const info = {};
+      snap.docs.forEach(doc => {
+        const data = doc.data();
+        if (data.athleteId) {
+          info[data.athleteId] = {
+            height: data.height,
+            wingspan: data.wingspan,
+          };
+        }
+      });
+      setAthleteInfo(info);
+    };
+    fetchAthletes();
   }, []);
 
   useEffect(() => {
@@ -81,6 +102,12 @@ export default function CoachDashboard() {
           player[natField] = Math.round(natVals.reduce((a, b) => a + b, 0) / natVals.length);
       });
 
+      if (athleteInfo[id]) {
+        const info = athleteInfo[id];
+        if (info.height !== undefined) player['Height'] = info.height;
+        if (info.wingspan !== undefined) player['Wingspan'] = info.wingspan;
+      }
+
       return player;
     });
 
@@ -118,7 +145,7 @@ export default function CoachDashboard() {
     });
 
     setPlayers(summaries);
-  }, [evaluations]);
+  }, [evaluations, athleteInfo]);
 
   const filteredPlayers = players.filter(p => {
     const matchGrade = filters.grade ? p.grade === filters.grade : true;

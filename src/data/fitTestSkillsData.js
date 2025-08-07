@@ -1,20 +1,6 @@
 export const fitTestSkills = [
   {
     category: 'Fit Test',
-    name: 'Height',
-    units: 'inches',
-    min: 64.0,
-    max: 83.0
-  },
-  {
-    category: 'Fit Test',
-    name: 'Wingspan',
-    units: 'inches',
-    min: 66.0,
-    max: 88.0
-  },
-  {
-    category: 'Fit Test',
     name: 'Standing Vertical Jump',
     units: 'cm',
     min: 30.0,
