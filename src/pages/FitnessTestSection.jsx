@@ -108,12 +108,8 @@ export default function FitnessTestSection() {
                         <th className="p-2 border">First</th>
                         <th className="p-2 border">Last</th>
                         <th className="p-2 border">Attempt 1</th>
-                        {skill.name !== "Height" && skill.name !== "Wingspan" && (
-                          <>
-                            <th className="p-2 border">Attempt 2</th>
-                            <th className="p-2 border">Attempt 3</th>
-                          </>
-                        )}
+                        <th className="p-2 border">Attempt 2</th>
+                        <th className="p-2 border">Attempt 3</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -126,12 +122,6 @@ export default function FitnessTestSection() {
                             <td className="p-2 border">{athlete.firstName}</td>
                             <td className="p-2 border">{athlete.lastName}</td>
                             {["Attempt 1", "Attempt 2", "Attempt 3"].map((label, i) => {
-                              if (
-                                (skill.name === "Height" ||
-                                  skill.name === "Wingspan") &&
-                                label !== "Attempt 1"
-                              )
-                                return null;
                               const attemptKey = `Attempt ${i + 1}`;
                               const value =
                                 evalData.attempts?.[attemptKey] ??

@@ -9,6 +9,8 @@ export default function TryoutRegistrationForm() {
     firstName: '',
     lastName: '',
     jerseyNumberToday: '',
+    height: '',
+    wingspan: '',
     grade: '',
     birthdate: '',
     gender: '',
@@ -50,6 +52,8 @@ export default function TryoutRegistrationForm() {
 
     const data = {
       ...form,
+      height: form.height ? parseFloat(form.height) : null,
+      wingspan: form.wingspan ? parseFloat(form.wingspan) : null,
       athleteId: newAthleteId,
       orgId: orgId,
       timestamp: new Date()
@@ -62,6 +66,8 @@ export default function TryoutRegistrationForm() {
         firstName: '',
         lastName: '',
         jerseyNumberToday: '',
+        height: '',
+        wingspan: '',
         grade: '',
         birthdate: '',
         gender: '',
@@ -93,6 +99,8 @@ export default function TryoutRegistrationForm() {
         <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="First Name" className="w-full p-2 border rounded" required />
         <input name="lastName" value={form.lastName} onChange={handleChange} placeholder="Last Name" className="w-full p-2 border rounded" required />
         <input name="jerseyNumberToday" value={form.jerseyNumberToday} onChange={handleChange} placeholder="Jersey Number (Today)" className="w-full p-2 border rounded" required />
+        <input type="number" step="any" name="height" value={form.height} onChange={handleChange} placeholder="Height (inches)" className="w-full p-2 border rounded" required />
+        <input type="number" step="any" name="wingspan" value={form.wingspan} onChange={handleChange} placeholder="Wingspan (inches)" className="w-full p-2 border rounded" required />
         <input name="grade" value={form.grade} onChange={handleChange} placeholder="Grade (e.g. 10)" className="w-full p-2 border rounded" required />
         <input type="date" name="birthdate" value={form.birthdate} onChange={handleChange} className="w-full p-2 border rounded" required />
 
